@@ -1,0 +1,20 @@
+{
+  "name": "fetchexe",
+  "version": "1.0.0",
+  "description": "fetches the work reports from the mes system.",
+  "main": "index.js",
+  "bin": "bin.js",
+  "pkg": {
+    "targets": [
+      "node10-win-x64"
+    ]
+  },  
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "uri even ezra",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.18.0"
+  }
+}
