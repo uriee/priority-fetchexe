@@ -16,20 +16,12 @@ const xxx = async function() {
         const date = dateFormat(now, "dd/mm/yy");     
         if (!data) throw new Error('No Data')
         let count = 1;
-        const first = '1\t 1\t'+ date 
+        const first = '1\t1\t'+ date 
         const reportLines = data.map(x=> {console.log('___',x);
-            return (++count).toString() + '\t2\t' +
-                                        x.wo.toString() +
-                                        '\t' +
-                                        x.act.toString() +
-                                        '\t' +
-                                        (x.quant * 1000).toString() +
-                                        '\t' +
-                                        x.id.toString() + 
-                                        '\n\r' +
-                                        (x.identifiers ? x.identifiers.map(iden => (++count).toString() + '\t3\t' +iden.name + '\n\r')  : '').toString().replace(/,/g, '')
-                                    })
-        const output = first + '\n\r' + reportLines
+            const line2 =  [(++count).toString(),'2','', x.wo.toString() ,  x.act.toString() , (x.quant * 1000).toString() ,x.id.toString(),''].join('\t')
+            const line3 =  x.identifiers.map(i =>  [(++count).toString(),'3', '','' , '' , '' , '' , i.name].join('\t')).join('\n')
+            return [line2,line3].join('\n')}).join('\n')
+        const output = first + '\n' + reportLines
         return fs.writeFileSync(fileFullPath,output)
        
     }catch(e){

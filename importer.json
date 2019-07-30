@@ -1,5 +1,5 @@
 {
 	"host": "http://192.9.200.70:4001/",
 	"url" : "mymes/exportWorkReport",
-	"fileFullPath" : "\\\\prisrv/priority/system/load/aform.doc"
+	"fileFullPath" : "\\\\192.10.200.101/priority/system/load/aform.doc"
 }
