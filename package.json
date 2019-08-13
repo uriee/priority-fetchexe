@@ -10,7 +10,8 @@
     ]
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "pkg" : "pkg index.js --targets=node10-win-x64"
   },
   "author": "uri even ezra",
   "license": "ISC",
